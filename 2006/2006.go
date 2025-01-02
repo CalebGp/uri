@@ -3,8 +3,15 @@ package main
 import "fmt"
 
 func main() {
-	var T1, T2, T3, T4 int
-	fmt.Scanf("%d %d %d %d", &T1, &T2, &T3, &T4)
-	result := (T1 + T2 + T3 + T4) - 3
-	fmt.Println(result)
+	var acertos int
+	var CorrectAnswer uint8
+	fmt.Scanf("%d\n", &CorrectAnswer)
+	var concorrentes = [5]uint8{}
+	fmt.Scanf("%d %d %d %d %d", &concorrentes[0], &concorrentes[1], &concorrentes[2], &concorrentes[3], &concorrentes[4])
+	for i := 0; i < 5; i++ {
+		if concorrentes[i] == CorrectAnswer {
+			acertos++
+		}
+	}
+	fmt.Println(acertos)
 }

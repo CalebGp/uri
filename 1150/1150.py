@@ -1,16 +1,11 @@
 x = int(input())
 z = -9999
-while z < x:
+while z <= x:
     z = int(input())
-s = 0
-c = 0
-arr = [x, z]
-arr.sort()
-x = arr[0]
-z = arr[1]
-while True:
-    s += x + c
-    c += 1
-    if s > z:
-        break
-print(c)
+sum_values = 0
+count = 0
+while sum_values < z:
+    sum_values += x
+    x += 1
+    count += 1
+print(count)
